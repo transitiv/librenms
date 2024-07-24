@@ -181,6 +181,30 @@ $(document).on("click", '.collapse-neighbors', function(event)
     continued.toggle();
 });
 
+//alert-map mode change
+$(document).on("change", '#mode', function() {
+    $.post('ajax/set_alert_map_view',
+        {
+            alert_map_view: $(this).val()
+        },
+        function(data) {
+                location.reload();
+        },'json'
+    );
+});
+
+//alert-map device group
+$(document).on("change", '#group', function() {
+    $.post('ajax/set_alert_map_group',
+        {
+            alert_map_group_view: $(this).val()
+        },
+        function(data){
+            location.reload();
+        },'json'
+    );
+});
+
 //availability-map mode change
 $(document).on("change", '#mode', function() {
     $.post('ajax/set_map_view',

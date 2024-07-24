@@ -157,6 +157,8 @@ Route::middleware(['auth'])->group(function () {
             Route::get('search/bgp', BgpSearchController::class);
             Route::get('search/device', DeviceSearchController::class);
             Route::get('search/port', PortSearchController::class);
+            Route::post('set_alert_map_group', 'AlertMapController@setGroup');
+            Route::post('set_alert_map_view', 'AlertMapController@setView');
             Route::post('set_map_group', 'AvailabilityMapController@setGroup');
             Route::post('set_map_view', 'AvailabilityMapController@setView');
             Route::post('set_resolution', 'ResolutionController@set');
@@ -220,6 +222,7 @@ Route::middleware(['auth'])->group(function () {
         Route::prefix('dash')->namespace('Widgets')->group(function () {
             Route::post('alerts', 'AlertsController');
             Route::post('alertlog', 'AlertlogController');
+            Route::post('alert-map', 'AlertMapController');
             Route::post('availability-map', 'AvailabilityMapController');
             Route::post('component-status', 'ComponentStatusController');
             Route::post('device-summary-horiz', 'DeviceSummaryHorizController');

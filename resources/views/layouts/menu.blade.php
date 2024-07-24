@@ -192,6 +192,9 @@
                                                  aria-hidden="true"></i> <span
                             class="hidden-sm">{{ __('Maps') }}</span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="{{ url('alert-map') }}"><i class="fa fa-arrow-circle-up fa-fw fa-lg"
+                                                                       aria-hidden="true"></i> {{ __('Alerts') }}
+                            </a></li>
                         <li><a href="{{ url('availability-map') }}"><i class="fa fa-arrow-circle-up fa-fw fa-lg"
                                                                        aria-hidden="true"></i> {{ __('Availability') }}
                             </a></li>

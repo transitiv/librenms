@@ -45,6 +45,7 @@ class DashboardController extends Controller
         'alert-map',
         'availability-map',
         'component-status',
+        'custom-map',
         'device-summary-horiz',
         'device-summary-vert',
         'device-types',
